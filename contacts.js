@@ -1,6 +1,7 @@
 const fs = require("fs").promises;
 const path = require("path");
 const { v4: uuidv4 } = require("uuid");
+const shortid = require("shortid");
 
 // Шлях до файлу
 const contactsPath = path.join("db", "contacts.json");
@@ -53,7 +54,8 @@ async function removeContact(contactId) {
 async function addContact(name, email, phone) {
   const response = await fs.readFile(contactsPath);
   const data = JSON.parse(response);
-  const newContact = { id: uuidv4(21), name, email, phone };
+  // const newContact = { id: uuidv4(21), name, email, phone };
+  const newContact = { id: shortid(21), name, email, phone };
   data.push(newContact);
   await fs.writeFile(contactsPath, JSON.stringify(data));
   return newContact;

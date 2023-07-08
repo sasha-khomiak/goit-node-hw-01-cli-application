@@ -13,3 +13,17 @@
 </div>
 
 ## ![preview](./assets/2-get.png)
+
+<div align="left">
+<p><b>3:</b> Додаємо контакт та виводимо в консоль об'єкт новоствореного контакту</p>
+<p>node index.js --action="add" --name Mango --email mango@gmail.com --phone 322-22-22</p>
+</div>
+
+## ![preview](./assets/3-add.png)
+
+<div align="left">
+<p><b>4:</b> Видаляємо контакт та виводимо в консоль об'єкт видаленого контакту або null, якщо контакту з таким id не існує.</p>
+<p>node index.js --action="remove" --id qdggE76Jtbfd9eWJHrssH</p>
+</div>
+
+## ![preview](./assets/4-delete.png)
